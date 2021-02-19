@@ -1,1 +1,0 @@
-document.body.innerHTML = "estou add um txt pelo JS" + document.body.innerHTML
