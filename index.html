@@ -1,67 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Intermediário</title>
-    <link rel="icon" href="./images/js.png" type="image/png" >
-    
-    <script>
+    <link rel="icon" href="./images/js.png" type="image/png">
 
-        function corBotIn (elemento){
-            
-            elemento.style = "background-color: red"
 
-        }
-
-        function corBotOut(elemento){
-            elemento.style = "background-color: rgb(79, 99, 212);"
-        }
-     
-        function aumentaimg(){
-            let img = document.getElementById("img");
-            img.setAttribute("src","https://a-static.mlcdn.com.br/1500x1500/almofada-geek-gamer-formato-controle-video-game-xbox-360-branco-camaleao-preto/camaletudesign/187/0cf1193aaae909a13b1d04cf10ea8694.jpg")
-            img.setAttribute("alt","imagem troll")
-
-        
-        }
-
-        function imgnormal(){
-            let img = document.getElementById("img")
-            img.setAttribute("src","https://images-americanas.b2w.io/produtos/01/00/img/37152/8/37152818_1GG.jpg")
-            
-        }
-
-    </script>
 
     <style>
-        .botao{
-            display: inline-block;
-            margin-left: 0x;
-            background-color: rgb(79, 99, 212);
-            padding: 15px;
-            border-radius: 15px;
-            border: solid 1px black;
-            text-align: center;
 
-        }
 
-        .imagem{
-            width: 200px;
-            display: block
-        }
-
-        
     </style>
+
+ 
+
+
 
 </head>
 
-<body onload="console.log('Pagina Carregada')">
-    <img id="img" class="imagem" src="https://images-americanas.b2w.io/produtos/01/00/img/37152/8/37152818_1GG.jpg" alt="">
-    <div class="botao" onmouseover="aumentaimg()" onmouseout="imgnormal()"> Click </div>
+<body>
+
+    <h1 id="t1"> título 1 </h1>
+    <h2 id="t2"> outro título 2</h2>
+
+    <script>
+
+      let t1 = document.getElementById("t1");
+      let t2 = document.getElementById("t2");
+
+      t1.onmouseover = colocarMaiusculo;
+      t2.onmouseover = colocarMaiusculo;
+
+      t1.onmouseout = colocarMinusculo;
+      t2.onmouseout = colocarMinusculo;
+
+      function colocarMaiusculo(){
+          this.innerHTML = this.innerHTML.toUpperCase();
+      }
+
+      function colocarMinusculo(){
+          this.innerText = this.innerText.toLowerCase();
+      }
+
+    </script>
+    
+    
 
 </body>
-</html>
 
+</html>
