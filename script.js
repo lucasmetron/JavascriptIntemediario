@@ -1,4 +1,4 @@
-function h1click(){
+/*function h1click(){
     console.log("executando a função")
 }
 
@@ -8,7 +8,6 @@ function h1(){
 
     h1.innerText = input.value
 
-
     console.log(h1)
     console.log(input)
-}
+}*/

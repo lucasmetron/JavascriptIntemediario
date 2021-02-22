@@ -7,23 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Intermediário</title>
     <link rel="icon" href="./images/js.png" type="image/png" >
-
-    <style>
-        .paragrafo{
-            color: red;
+    
+    <script>
+        function h1click(){
+            console.log("executando a função")
+        }
+        
+        function h1(){ 
+            let h1 = document.getElementsByTagName("h1")[0]
+            let inputt = document.getElementById (2)
+        
+            h1.innerText = inputt.value
+        
+            console.log(h1)
+            
         }
 
+        function hideh1(){
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.style.display = "none"
+            console.log(h1)
+        }
+
+    </script>
+
+    <style>
+        div{
+            padding: 20px;
+            font-size: 2rem;
+            background-color: aquamarine;
+            color: white;
+            display: inline-block;
+        }
     </style>
+
 </head>
 
 <body>
 
     <h1>Click em mim</h1>
     
-    <input id="texto" type="text" onchange="h1()">
+    <input id = 2 type="text" oninput="h1()" >
 
 
 
-    <script src="./script.js"> </script>
+    
 </body>
 </html>
