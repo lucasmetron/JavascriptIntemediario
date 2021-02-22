@@ -9,35 +9,21 @@
     <link rel="icon" href="./images/js.png" type="image/png" >
     
     <script>
-        function h1click(){
-            console.log("executando a função")
-        }
-        
-        function h1(){ 
-            let h1 = document.getElementsByTagName("h1")[0]
-            let inputt = document.getElementById (2)
-        
-            h1.innerText = inputt.value
-        
-            console.log(h1)
-            
-        }
+       
+       function clicado(){
+           console.log("foi clicado!")
+       }
 
-        function hideh1(){
-            let h1 = document.getElementsByTagName("h1")[0]
-            h1.style.display = "none"
-            console.log(h1)
-        }
+       function changeh1(input){
+           let h1 = document.getElementsByTagName("h1")[0];
+           
+           h1.innerText = input.value 
+       }
 
     </script>
 
     <style>
-        div{
-            padding: 20px;
-            font-size: 2rem;
-            background-color: aquamarine;
-            color: white;
-            display: inline-block;
+      
         }
     </style>
 
@@ -45,11 +31,9 @@
 
 <body>
 
-    <h1>Click em mim</h1>
-    
-    <input id = 2 type="text" oninput="h1()" >
+    <h1>Clique em mim</h1>
 
-
+    <input type="text" onchange="changeh1(this)">
 
     
 </body>
