@@ -9,46 +9,59 @@
     <link rel="icon" href="./images/js.png" type="image/png" >
     
     <script>
-       
-       function clicado(){
-           console.log("foi clicado!")
-       }
 
-       function changeh1(input){
-           let h1 = document.getElementsByTagName("h1")[0];
-           
-           h1.innerText = input.value 
-       }
+        function corBotIn (elemento){
+            
+            elemento.style = "background-color: red"
 
-       function esconder(){
-            let h1 = document.getElementsByTagName("h1")[0];
-            h1.style = "display: none"
-       }
+        }
+
+        function corBotOut(elemento){
+            elemento.style = "background-color: rgb(79, 99, 212);"
+        }
+     
+        function aumentaimg(){
+            let img = document.getElementById("img");
+            img.setAttribute("src","https://a-static.mlcdn.com.br/1500x1500/almofada-geek-gamer-formato-controle-video-game-xbox-360-branco-camaleao-preto/camaletudesign/187/0cf1193aaae909a13b1d04cf10ea8694.jpg")
+            img.setAttribute("alt","imagem troll")
+
+        
+        }
+
+        function imgnormal(){
+            let img = document.getElementById("img")
+            img.setAttribute("src","https://images-americanas.b2w.io/produtos/01/00/img/37152/8/37152818_1GG.jpg")
+            
+        }
 
     </script>
 
     <style>
-      
         .botao{
             display: inline-block;
-            background-color: brown;
+            margin-left: 0x;
+            background-color: rgb(79, 99, 212);
             padding: 15px;
             border-radius: 15px;
             border: solid 1px black;
             text-align: center;
 
         }
+
+        .imagem{
+            width: 200px;
+            display: block
         }
+
+        
     </style>
 
 </head>
 
-<body>
+<body onload="console.log('Pagina Carregada')">
+    <img id="img" class="imagem" src="https://images-americanas.b2w.io/produtos/01/00/img/37152/8/37152818_1GG.jpg" alt="">
+    <div class="botao" onmouseover="aumentaimg()" onmouseout="imgnormal()"> Click </div>
 
-    <h1>Texto que vou esconter</h1>
-
-    <div class="botao" onclick="esconder()"> esconder </div>
-
-    
 </body>
 </html>
+
