@@ -19,19 +19,26 @@
 
 
     <script>
-         
-        window.onload  = function(){
-            
-            let d1 = document.getElementById("d1")
-            let h1 = d1.children[1]
-            console.log(h1.parentElement)
 
-            let d2 = document.getElementById("d2")
+        window.onload = function () {
+
+            let h1 = document.getElementsByTagName("h1")
+
+
+            for (var h of h1) {
+
+                console.log(h)
+                h.onclick = qop;
+            }
+
+
+            function qop(e) {
+                let t = e.target
+                console.log(t.parentElement)
+            }
 
         }
 
-
-        
     </script>
 
 
@@ -44,14 +51,15 @@
         <h1>Titulo 01</h1>
         <p>Qualquer texto 01</p>
     </div>
-  
+
     <div id="d2">
         <h1>Titulo 02</h1>
         <p>Qualquer texto 02</p>
     </div>
-  
-    
-    
+
+
+
+
 
 </body>
 
