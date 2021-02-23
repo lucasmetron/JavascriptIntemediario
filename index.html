@@ -10,35 +10,27 @@
     <link rel="icon" href="./images/js.png" type="image/png">
 
 
-
-    <style>
-
-
-    </style>
-
-
-
     <script>
 
-        window.onload = function () {
+        onload = function (){
+            let nome = localStorage.getItem("nome")
+            let h1 = document.getElementById("nomeh1")
 
-            let h1 = document.getElementsByTagName("h1")
+            h1.innerText = nome;
+        }
 
+        function atualizar(elemento){
+            let valor = elemento.value
+            let h1 = document.getElementById("nomeh1")
 
-            for (var h of h1) {
+            h1.innerText = valor 
 
-                console.log(h)
-                h.onclick = qop;
-            }
+            localStorage.setItem("nome", valor)
 
-
-            function qop(e) {
-                let t = e.target
-                console.log(t.parentElement)
-            }
 
         }
 
+    
     </script>
 
 
@@ -47,18 +39,8 @@
 
 <body>
 
-    <div id="d1">
-        <h1>Titulo 01</h1>
-        <p>Qualquer texto 01</p>
-    </div>
-
-    <div id="d2">
-        <h1>Titulo 02</h1>
-        <p>Qualquer texto 02</p>
-    </div>
-
-
-
+    <h1 id="nomeh1"> </h1>
+    <input type="text" oninput="atualizar(this)">
 
 
 </body>
