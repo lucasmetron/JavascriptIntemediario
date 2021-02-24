@@ -10,39 +10,32 @@
     <link rel="icon" href="./images/js.png" type="image/png">
 
 
-    <script>
-
-        onload = function (){
-            let nome = localStorage.getItem("nome")
-            let h1 = document.getElementById("nomeh1")
-
-            h1.innerText = nome;
-        }
-
-        function atualizar(elemento){
-            let valor = elemento.value
-            let h1 = document.getElementById("nomeh1")
-
-            h1.innerText = valor 
-
-            localStorage.setItem("nome", valor)
-
-
-        }
-
-    
-    </script>
-
-
 
 </head>
 
+<style>
+    .bt{
+        border: solid 1px black;
+        display: inline-block;
+        padding: 5px;
+    }
+</style>
+
 <body>
 
-    <h1 id="nomeh1"> </h1>
-    <input type="text" oninput="atualizar(this)">
+    <h1 > Digite sua tarefa </h1>
 
+    <input type="text" id="contTarefa"><br>
+    <p onclick="addTarefa()" class="bt" >Adicionar</p>
+    <p id="excluirTarefa" onclick="excluiTarefa()" class="bt"> Excluir Tarefa</p>
+    
+    <ul id="telaTarefas"> 
+        
+    </ul>
 
+    
+
+<script src="./script.js"></script>
 </body>
 
 </html>
