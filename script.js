@@ -6,8 +6,9 @@ onload = function () {
     let todasTarefas = JSON.parse(t2)
 
     console.log(todasTarefas)
+    tarefas = todasTarefas
 
-    for (let i = 0; i < todasTarefas.length; i++){
+    for (let i = 0; i < tarefas.length; i++){
         let liNova = document.createElement ("li") //criando tag
         let liCont = document.createTextNode(todasTarefas[i]) //conteudo da nova tag
         liNova.appendChild(liCont) //colocando conteuo dentro da nova tag
@@ -37,18 +38,9 @@ function addTarefa() {
    
 }
 
-function mostrarTarefas() {
-    let p = document.getElementById("mostraTarefa")
-    console.log(p)
-
-    for(let i of tarefas){
-        console.log(tarefas[i])
-
-    }
-}
-
-function excluirTarefa() {
-    
+function excluiTarefa() {
+    localStorage.clear();
+    localStorage.setItem("tarefasMemoria", "teste")
 }
 
 
