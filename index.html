@@ -18,30 +18,28 @@
 </style>
 
 <script>
-    var numero = 0;
-    var intervalo;
 
-    function atualizarTexto(){
-        let h1 = document.getElementsByTagName("h1")[0]
-        h1.innerHTML = h1.innerHTML + " "+ numero
-        numero++
+    let pessoas = ["igor", "jose", "marcus", "Pamela", "Joana"]
+
+    function sortear(){
+        let np = pessoas.length ;
+        let ns = parseInt(Math.random() * np)
+
+        document.getElementById("d").innerText = "Número "+ ns + " = "+pessoas[ns] 
     }
 
-    function iniciar(){
-      intervalo =  window.setInterval(atualizarTexto, 1000)
-    }
+    console.log(Math.random()*5) 
 
-    function parar(){
-        clearInterval(intervalo)
-    }
 </script>
 
 <body>
 
-    <h1>Titulo</h1>
-    <input type="submit" value="Iniciar" onclick="iniciar()">
-    <input type="submit" value="parar" onclick="parar()">
+    <h1 id="d"></h1>
 
+    <button onclick="sortear()"> Sortear </button>
+    
+
+<script src="./script.js"></script>
 </body>
 
 </html>
